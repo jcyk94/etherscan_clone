@@ -1,0 +1,36 @@
+html {
+  font-size: 16px;
+}
+
+#body {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+#searchBar {
+  border-radius: 3px;
+  background: linear-gradient(to right, #1b91f1, #2548b0);
+  height: 140px;
+  padding-left: 10%;
+}
+
+.form-outline input {
+  width: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.form-outline button {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.card {
+  border: 1px solid purple;
+  margin: 30px;
+  padding: 10px;
+}

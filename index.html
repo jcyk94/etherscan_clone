@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lagn="eng" id="html">
+
+<head>
+      <title>Jonathan Explorer</title>
+      <meta http-equiv="content-type" content="text/html" ; charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel='stylesheet' href='src/styles.css' />
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      <script src="https://kit.fontawesome.com/20e0fcc1d0.js" crossorigin="anonymous"></script>
+</head>
+
+<div id="feed"></div>
+
+<body id="body">
+      <div id="searchBar" class="container-fluid">
+            <h1>Jonathan Explorer</h1>
+            <div class="input-group">
+                  <div class="form-outline">
+                        <input type="search" id="form1" class="form-control">
+                        <button type=" searchButton" class="btn btn-primary">
+                              <i class="fas fa-search"></i>
+                        </button>
+                  </div>
+            </div>
+      </div>
+
+      <!-- <h5 class="card-title">ETHER PRICE</h5> -->
+      <div id="cards"></div>
+      <!-- <div class="card border-primary mb-3" style="max-width: 35rem;">
+            <div class="card-body text-primary">
+            </div>
+      </div> -->
+
+
+      <!-- <div id="dailySummary">
+            <div id="summaryContent">
+                <div id="summary">
+                    <div id="summary-1">
+                        <div id="summary-1-1">
+                            <div id="summary-1-container">
+                                <figure id="summary-1-1-figure">
+                                    <img src="images/index_eth/ethereum-1.svg">
+                                </figure>
+                                <div id="summary-1-1-left-content">
+                                    <h2 class="fontfamily-1 font-color-4 font-size-3 font-weight-300">TRANSACTIONS</h2>
+                                    <a class="fontfamily-1 under-line-none font-color-3 hover-no-change-summary"
+                                       href="/txns">100.0M</a>
+                                    <span id="summary-1-1-left-reference"
+                                          class="fontfamily-1 font-color-4">(10.0 TPS)</span>
+                                </div>
+                                <div id="summary-1-1-right-content">
+                                    <h2 class="fontfamily-1 font-color-4 font-size-3 font-weight-300">SAFE GAS
+                                        PRICE</h2>
+                                    <a class="fontfamily-1 under-line-none font-color-3 hover-no-change-summary"
+                                       href="/gastracker">2 Gwei</a>
+                                    <span id="summary-1-1-right-reference"
+                                          class="fontfamily-1 font-color-4">(<0.01$)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hr-summary">
+                        <div id="summary-1-2">
+                            <div id="summary-1-2-container">
+                                <figure id="summary-1-2-figure">
+                                    <img src="images/index_eth/icon-51.svg">
+                                </figure>
+                                <div id="summary-1-2-left-content">
+                                    <h2 class="fontfamily-1 font-color-4 font-size-3 font-weight-300">TRANSACTIONS</h2>
+                                    <a class="fontfamily-1 under-line-none font-color-3 hover-no-change-summary"
+                                       href="/txns">100.0M</a>
+                                    <span id="summary-1-2-left-reference"
+                                          class="fontfamily-1 font-color-4">(10.0 TPS)</span>
+                                </div>
+                                <div id="summary-1-2-right-content">
+                                    <h2 class="fontfamily-1 font-color-4 font-size-3 font-weight-300">SAFE GAS
+                                        PRICE</h2>
+                                    <a class="fontfamily-1 under-line-none font-color-3 hover-no-change-summary"
+                                       href="/gastracker">2 Gwei</a>
+                                    <span id="summary-1-2-right-reference"
+                                          class="fontfamily-1 font-color-4">(<0.01$)</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="v-hr-summary"></div>
+                    <div id="summary-2">
+                        <h2 class="fontfamily-1 font-color-4 font-size-3 font-weight-300">ETHEREUM TRANSACTION HISTORY
+                            IN 14 DAYS</h2>
+                        <div id="transactionsChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- <div id="latestData">
+            <div id="blocks">
+                <div id="blocks-container">
+                    <div id="blocks-title-container">
+                        <h2 class="fontfamily-1 font-color-5 font-size-1 font-weight-600">Latest Blocks</h2>
+                    </div>
+                    <div id="scroll">
+                        <div id="scroll-part">
+                            <div id="scroll-part-container">
+                                <div class="scroll-row-1">
+                                    <div class="scroll-row-1-1">
+                                        <div class="scroll-row-1-1-left">
+                                            <div class="scroll-row-1-1-left-icon">
+                                            <span class="scroll-row-icon-block font-size-1 font-weight-500">
+                                                <span
+                                                      class="scroll-row-icon-text font-size-1 font-weight-500 fontfamily-1">Bk</span>
+                                            </span>
+                                            </div>
+                                            <div class="scroll-row-1-1-left-content">
+                                                <a
+                                                   class="scroll-row-1-1-left-content-number fontfamily-1 font-size-1" 　href="/block/9873479">9873479</a>
+                                                <span
+                                                      class="countdown font-color-4 fontfamily-1 font-weight-400 under-line-none">1 min 35 secs ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="scroll-row-1-1-right fontfamily-1 font-size-1 font-weight-400">
+                                        <div class="scroll-row-1-1-right-sub">
+                                            <div class="scroll-row-1-1-right-center">
+                                                        <span class="scroll-row-1-1-right-miner fontfamily-1 font-size-1 font-weight-400">
+                                                            Miner
+                                                            <a class="scroll-row-1-1-right-name fontfamily-1 font-size-1 font-weight-400 font-color-6"
+                                                               href="/address">Spark Pool</a>
+                                                        </span>
+                                                <a class="scroll-row-1-1-right-txns fontfamily-1 font-size-1 font-weight-400 font-color-6"
+                                                   title="Transactions in this Block" href="/txns">115
+                                                    txns</a>
+                                                <span class="scroll-row-1-1-right-blockTime fontfamily-1 font-weight-400">in 2 secs</span>
+                                            </div>
+                                            <div class="scroll-row-1-1-right-reward">
+                                                        <span class="scroll-row-1-1-right-reward-content fontfamily-1 font-weight-500 font-size-4"
+                                                              title="Block Reward">
+                                                            2
+                                                            <b>.</b>
+                                                            0439Eth
+                                                        </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="transactions">
+
+            </div>
+        </div> -->
+</body>
+
+<script type="text/javascript" src="./src/app.js"></script>
+
+</html>
